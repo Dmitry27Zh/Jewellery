@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Poppins Poppins-SemiBoldMedium"), local("Poppins-Medium"), url("poppinspoppins-semiboldmedium.woff2") format("woff2"), url("poppinspoppins-semiboldmedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Poppins Regular"), local("Poppins-Regular"), url("poppinsregular.woff2") format("woff2"), url("poppinsregular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Poppins Bold"), local("Poppins-Bold"), url("poppinsbold.woff2") format("woff2"), url("poppinsbold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Cormorant Garamond Bold"), local("CormorantGaramond-Bold"), url("cormorantgaramondbold.woff2") format("woff2"), url("cormorantgaramondbold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-weight: 600;
+  font-style: normal;
+  src: local("Cormorant Garamond Semibold"), local("CormorantGaramond-Semibold"), url("cormorantgaramondsemibold.woff2") format("woff2"), url("cormorantgaramondsemibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Cormorant Garamond Book"), local("CormorantGaramond-Book"), url("cormorantgaramondbook.woff2") format("woff2"), url("cormorantgaramondbook.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Cormorant Garamond"), local("CormorantGaramond-Regular"), url("cormorantgaramond.woff2") format("woff2"), url("cormorantgaramond.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-weight: 400;
+  font-style: italic;
+  src: local("Cormorant Garamond Italic"), local("CormorantGaramond-Italic"), url("cormorantgaramonditalic.woff2") format("woff2"), url("cormorantgaramonditalic.woff") format("woff");
+}
