@@ -17,6 +17,7 @@
       background-color: $brown;
       transition-property: background-color, color;
       transition-duration: 0.4s;
+      transition-timing-function: linear;
 
       .header__toggle::before,
       .header__toggle::after {
@@ -117,11 +118,10 @@
   margin-top: 12px;
 
   input {
+    @include button-reset;
     width: 100%;
     height: 25px;
     padding-left: 29px;
-    border: none;
-    outline: none;
 
     &::placeholder {
       font: inherit;
