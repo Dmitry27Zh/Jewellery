@@ -1,0 +1,17 @@
+.form {
+  input {
+    &:hover,
+    &:focus {
+      background-color: rgba($black, 0.05);
+    }
+  }
+
+  &--black {
+    input {
+      &:hover,
+      &:focus {
+        background-color: rgba($white, 0.05);
+      }
+    }
+  }
+}
