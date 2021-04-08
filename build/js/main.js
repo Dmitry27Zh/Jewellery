@@ -9,6 +9,8 @@
 
     toggleButton.addEventListener('click', () => {
       header.classList.toggle('header--menu-opened');
+
+      [...document.body.children].filter((element) => element !== header).forEach((element) => element.classList.toggle('inactive'));
     });
   }
 })();
