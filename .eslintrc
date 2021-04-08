@@ -1,7 +1,14 @@
-root: true
+{
+  "root": true,
 
-env:
-  browser: true
+  "env": {
+    "es6": true,
+    "browser": true
+  },
 
-extends:
-  "htmlacademy/es5"
+  "extends": ["htmlacademy/es5.5"],
+
+  "rules": {
+    "quotes": [2, "single"]
+  }
+}

@@ -18,7 +18,9 @@ img {
 }
 
 input {
+  box-sizing: border-box;
   font: inherit;
+  color: inherit;
 }
 
 .visually-hidden:not(:focus):not(:active),

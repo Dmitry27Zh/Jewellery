@@ -1,8 +1,12 @@
 .wrapper {
-  max-width: 1170px;
+  box-sizing: border-box;
   padding: 0 7.174vw;
 
-  @media (min-width: 1366px) {
-    padding: 0 calc((100vw - 1170px) / 2);
+  @media (max-width: $tablet-width-max) {
+    padding: 0 5.859vw;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    padding: 0 4.687vw;
   }
 }
