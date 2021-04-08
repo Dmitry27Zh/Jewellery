@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jewellery store — main</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/style.min.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header__wrapper">
+    <header class="header wrapper">
+      <div class="header__wrapper wrapper">
         <button class="header__toggle">
           <span class="visually-hidden">Open/close mobile menu</span>
         </button>
-        <form action="https://echo.htmlacademy.ru/" method="GET">
-          <label for="search">Enter your request</label>
+        <form class="header__form-search" action="https://echo.htmlacademy.ru/" method="GET">
+          <label class="visually-hidden" for="search">Enter your request</label>
           <input type="text" name="search" id="search" placeholder="Type here to search" />
         </form>
         <div class="header__logo">
@@ -30,7 +30,15 @@
             <a class="header__user-nav-link" href="#">Login</a>
           </li>
           <li class="header__user-nav-item">
-            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" stroke="#1D1613" stroke-width="2">
+            <svg
+              class="header__user-nav-icon"
+              width="20"
+              height="18"
+              viewBox="0 0 20 18"
+              fill="none"
+              stroke="#1D1613"
+              stroke-width="2"
+            >
               <path
                 d="M14 5C14 6.06087 13.5786 7.07828 12.8284 7.82843C12.0783 8.57857 11.0609 9 10 9C8.93913 9 7.92172 8.57857 7.17157 7.82843C6.42143 7.07828 6 6.06087 6 5M1 1H19V17H1V1Z"
                 stroke-linecap="round"
@@ -41,8 +49,8 @@
           </li>
         </ul>
       </div>
-      <nav>
-        <ul class="main-nav header__nav">
+      <nav class="header__nav">
+        <ul class="main-nav">
           <li class="main-nav__item"><a class="main-nav__link" href="#">What’s new</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="#">Chokers</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="#">Necklaces</a></li>
