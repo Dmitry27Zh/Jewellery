@@ -10,6 +10,16 @@
   grid-template-rows: 1fr 1fr;
   justify-content: space-between;
   row-gap: 30px;
+
+  @media (min-width: $desktop-width-min) and (max-width: $template-width - 1) {
+    row-gap: 2.196vw;
+  }
+
+  @media (max-width: $tablet-width-max) {
+    grid-template-columns: 100%;
+    grid-auto-rows: 1fr;
+    row-gap: 50px;
+  }
 }
 
 .blog__item {
@@ -57,6 +67,10 @@
         background-image: url("../img/blog-power@2x.jpg");
       }
     }
+
+    @media (max-width: $tablet-width-max) {
+      grid-row: auto;
+    }
   }
 
   &--trends {
@@ -71,6 +85,10 @@
       @media (min-resolution: 2dppx) {
         background-image: url("../img/blog-trends@2x.jpg");
       }
+
+      @media (max-width: $tablet-width-max) {
+        width: 50%;
+      }
     }
 
     .blog__article {
@@ -78,12 +96,25 @@
       flex-grow: 1;
       align-self: flex-end;
       margin-top: 30px;
+
+      @media (max-width: $tablet-width-max) {
+        margin-top: 0;
+      }
     }
 
     &::before {
       flex-basis: 40%;
       flex-grow: 1;
       content: "";
+
+      @media (max-width: $tablet-width-max) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $tablet-width-max) {
+      grid-column: auto;
+      grid-row: auto;
     }
   }
 }
@@ -118,6 +149,10 @@
       margin-bottom: 2.489vw;
       font-size: 1.9vw;
     }
+  }
+
+  @media (max-width: $tablet-width-max) {
+    padding: 71px 88px;
   }
 }
 
