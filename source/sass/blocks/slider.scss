@@ -1,0 +1,27 @@
+.slider {
+  position: relative;
+}
+
+.slider__list {
+  @include list-reset;
+  display: flex;
+}
+
+.slider__item {
+  flex-shrink: 0;
+}
+
+.slider__pagination {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+}
+
+.slider__page {
+  margin-right: 15px;
+  color: $aside-gray;
+
+  &--current {
+    color: $deep-dark;
+  }
+}

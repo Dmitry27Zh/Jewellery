@@ -73,6 +73,7 @@
 
   @media (max-width: $mobile-width-max) {
     @include wrapper-exit;
+    min-height: 92px;
     padding: 20px 0;
   }
 }
