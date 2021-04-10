@@ -4,4 +4,9 @@
   margin-top: 23px;
   margin-bottom: 60px;
   border-bottom: 1px solid $brown;
+
+  @media (max-width: $tablet-width-max) {
+    margin-top: 18px;
+    margin-bottom: 50px;
+  }
 }

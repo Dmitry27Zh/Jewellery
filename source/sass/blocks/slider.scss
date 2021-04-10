@@ -5,6 +5,7 @@
 .slider__list {
   @include list-reset;
   display: flex;
+  overflow: hidden;
 }
 
 .slider__item {
