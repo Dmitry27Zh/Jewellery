@@ -60,6 +60,67 @@
         <h2>PERFECTION</h2>
         <h3>made to be yours</h3>
       </section>
+      <section class="some-products wrapper section">
+        <h2>New In</h2>
+        <a class="section-link link" href="#">Shop Now</a>
+        <div class="some-products__slider slider">
+          <ul class="some-products__list slider__list">
+            <li class="some-products__item slider__item">
+              <div class="some-products__item-picture">
+                <picture>
+                  <img src="img/product-1@1x.jpg" srcset="img/product-1@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
+                </picture>
+              </div>
+              <h3>Necklace with amethyst</h3>
+              <p>$ 145</p>
+            </li>
+            <li class="some-products__item slider__item">
+              <div class="some-products__item-picture">
+                <picture>
+                  <img src="img/product-2@1x.jpg" srcset="img/product-2@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
+                </picture>
+              </div>
+              <h3>Layered сhoker</h3>
+              <p>$ 115</p>
+            </li>
+            <li class="some-products__item slider__item">
+              <div class="some-products__item-picture">
+                <picture>
+                  <img src="img/product-3@1x.jpg" srcset="img/product-3@2x.jpg 2x" width="270" height="284" alt="Gold chain">
+                </picture>
+              </div>
+              <h3>Gold chain</h3>
+              <p>$ 215</p>
+            </li>
+            <li class="some-products__item slider__item">
+              <div class="some-products__item-picture">
+                <picture>
+                  <img src="img/product-4@1x.jpg" srcset="img/product-4@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+                </picture>
+              </div>
+              <h3>Galaxy earrings</h3>
+              <p>$ 95</p>
+            </li>
+          </ul>
+          <ul class="some-products__pagination slider__pagination">
+            <li class="slider__page slider__page--current"><a href="#">1</a></li>
+            <li class="slider__page"><a href="#">2</a></li>
+            <li class="slider__page"><a href="#">3</a></li>
+          </ul>
+          <button class="some-products__button some-products__button--prev slider__button-prev" disabled="">
+            <span class="visually-hidden">Предыдущая страница</span>
+            <svg width="30" height="11" viewBox="0 0 30 11" fill="none" stroke="#A87B62">
+              <path d="M30 5.5L1 5.5M1 5.5L6.48649 10M1 5.5L6.48649 1"></path>
+            </svg>
+          </button>
+          <button class="some-products__button some-products__button--next slider__button-next">
+            <span class="visually-hidden">Следующая страница</span>
+            <svg width="30" height="11" viewBox="0 0 30 11" fill="none" stroke="#A87B62">
+              <path d="M0 5.5H29M29 5.5L23.5135 1M29 5.5L23.5135 10"></path>
+            </svg>
+          </button>
+        </div>
+      </section>
     </main>
     <footer class="footer wrapper">
       <div class="footer__wrapper">
@@ -71,7 +132,7 @@
             <input type="email" id="email" name="email" placeholder="Your E-mail">
             <button type="submit">
               Sign Up
-              <svg class="footer__subscription-submit-icon" width="30" height="11" viewBox="0 0 30 11" fill="none" stroke="#ffffff" xmlns="http://www.w3.org/2000/svg">
+              <svg class="footer__subscription-submit-icon" width="30" height="11" viewBox="0 0 30 11" fill="none" stroke="#ffffff">
                 <path d="M0 5.5H29M29 5.5L23.5135 1M29 5.5L23.5135 10"></path>
               </svg>
             </button>
