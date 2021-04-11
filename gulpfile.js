@@ -17,8 +17,8 @@ var include = require('posthtml-include');
 var del = require('del');
 var concat = require('gulp-concat');
 
-var jsFileList = ['source/js/modules/mobile-menu.js', 'source/js/modules/accordion.js',
-'source/js/modules/slider.js'];
+var jsFileList = ['source/js/modules/utils/const.js','source/js/modules/utils/common.js', 'source/js/modules/mobile-menu.js', 'source/js/modules/accordion.js',
+'source/js/modules/slider.js', 'source/js/modules/some-products-slider.js'];
 
 gulp.task('css', function () {
   return gulp.src('source/sass/style.scss')
