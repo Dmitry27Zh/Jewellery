@@ -10,20 +10,23 @@
     let moveLength = null;
     let currentBreakpoint = null;
     let currentTranslateValue = 0;
-    let currentSlide = 0;
+    let currentPage = 0;
+
+    function getBreakpoint() {
+      currentBreakpoint = Object.keys(Breakpoints).find((breakpoint) => window.common.isInRange(Breakpoints[breakpoint], document.documentElement.clientWidth));
+    }
 
     function getMoveLength() {
-      currentBreakpoint = Object.keys(Breakpoints).find((breakpoint) => window.common.isInRange(Breakpoints[breakpoint], document.documentElement.clientWidth));
       moveLength = slidesContainer.offsetWidth * moveLengthPerc[currentBreakpoint] / 100 * slidesPerSwitch[currentBreakpoint];
     }
 
     function switchButtons() {
-      if (currentSlide === pagesQuantity[currentBreakpoint] - 1) {
+      if (currentPage === pagesQuantity[currentBreakpoint] - 1) {
         sliderButtonNext.disabled = true;
       } else {
         sliderButtonNext.disabled = false;
       }
-      if (currentSlide === 0) {
+      if (currentPage === 0) {
         sliderButtonPrev.disabled = true;
       } else {
         sliderButtonPrev.disabled = false;
@@ -31,19 +34,18 @@
     }
 
     function switchPage(mode, page) {
-      sliderPagination.children[currentSlide].classList.remove('slider__page--current');
+      sliderPagination.children[currentPage].classList.remove('slider__page--current');
       switch (mode) {
         case SliderMode.PREV:
-          currentSlide--;
+          currentPage--;
           break;
         case SliderMode.NEXT:
-          currentSlide++;
+          currentPage++;
           break;
         case SliderMode.PAGE:
-          currentSlide = page;
+          currentPage = page;
       }
-      sliderPagination.children[currentSlide].classList.add('slider__page--current');
-
+      sliderPagination.children[currentPage].classList.add('slider__page--current');
     }
 
     function switchSlide(mode, page) {
@@ -74,12 +76,19 @@
     }
 
     function sliderResizeHandler() {
+      const lastBreakpoint = currentBreakpoint;
+      getBreakpoint();
+      const savedPage = Math.trunc(currentPage * slidesPerSwitch[lastBreakpoint] / slidesPerSwitch[currentBreakpoint]);
+      if (lastBreakpoint !== currentBreakpoint && savedPage !== currentPage) {
+        switchPage(SliderMode.PAGE, savedPage);
+      }
       getMoveLength();
-      currentTranslateValue = -moveLength * currentSlide;
+      currentTranslateValue = -moveLength * currentPage;
       slidesContainer.style.transform = `translateX(${currentTranslateValue}px)`;
     }
 
     function init() {
+      getBreakpoint();
       getMoveLength();
 
       sliderButtonNext.addEventListener('click', () => {
