@@ -1,0 +1,26 @@
+.follow {
+  padding-top: 54px;
+  padding-bottom: 130px;
+  text-align: center;
+}
+
+.follow__picture {
+  @media (max-width: $mobile-width-max) {
+    display: none;
+  }
+
+  &--mobile {
+    display: none;
+
+    @media (max-width: $mobile-width-max) {
+      display: block;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
