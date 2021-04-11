@@ -120,7 +120,7 @@
   position: absolute;
   box-sizing: border-box;
   width: 100%;
-  transition-property: transform opacity display;
+  transition-property: transform opacity;
   transition-duration: 0.3s;
   transition-timing-function: ease-in;
   transform: translateY(-20px);
