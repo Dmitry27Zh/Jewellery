@@ -175,7 +175,7 @@
     }
     return function () {
       init();
-      if (currentBreakpoint === 'MOBILE') {
+      if (window.common.isTouchDevice()) {
         slidesContainer.addEventListener('touchstart', touchStartHandler);
       }
     };

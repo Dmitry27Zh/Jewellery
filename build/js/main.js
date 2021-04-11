@@ -26,8 +26,18 @@
     return number >= min && number < max;
   };
 
+  const isTouchDevice = () => {
+    try {
+      document.createEvent('TouchEvent');
+      return true;
+    } catch (e) {
+      return false;
+    }
+  };
+
   window.common = {
     isInRange,
+    isTouchDevice,
   };
 })();
 
@@ -238,7 +248,7 @@
     }
     return function () {
       init();
-      if (currentBreakpoint === 'MOBILE') {
+      if (window.common.isTouchDevice()) {
         slidesContainer.addEventListener('touchstart', touchStartHandler);
       }
     };
