@@ -2,10 +2,16 @@
   position: relative;
 }
 
+.slider__wrapper {
+  overflow: hidden;
+}
+
 .slider__list {
   @include list-reset;
   display: flex;
-  overflow: hidden;
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transition-timing-function: ease;
 }
 
 .slider__item {
