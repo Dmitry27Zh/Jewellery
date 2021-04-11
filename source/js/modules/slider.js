@@ -11,6 +11,7 @@
   const SliderMode = {
     PREV: 'prev',
     NEXT: 'next',
+    PAGE: 'page',
   };
 
   const PAGES_QUANTITY = 3;
@@ -36,7 +37,7 @@
     }
   }
 
-  function switchPage(mode) {
+  function switchPage(mode, page) {
     sliderPagination.children[currentSlide].classList.remove('slider__page--current');
     switch (mode) {
       case SliderMode.PREV:
@@ -45,12 +46,14 @@
       case SliderMode.NEXT:
         currentSlide++;
         break;
+      case SliderMode.PAGE:
+        currentSlide = page;
     }
     sliderPagination.children[currentSlide].classList.add('slider__page--current');
 
   }
 
-  function switchSlide(mode) {
+  function switchSlide(mode, page) {
     isSliding = true;
     switch (mode) {
       case SliderMode.PREV:
@@ -63,6 +66,10 @@
         switchButtons();
         currentTranslateValue -= moveLength;
         break;
+      case SliderMode.PAGE:
+        switchPage(mode, page);
+        switchButtons();
+        currentTranslateValue = -page * moveLength;
     }
     slidesContainer.style.transform = `translateX(${currentTranslateValue}px)`;
     setTimeout(() => {
@@ -82,5 +89,12 @@
       return;
     }
     switchSlide(SliderMode.PREV);
+  });
+
+  sliderPagination.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    if (evt.target.tagName === 'A') {
+      switchSlide(SliderMode.PAGE, [...sliderPagination.children].indexOf(evt.target.parentElement));
+    }
   });
 })();
