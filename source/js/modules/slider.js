@@ -55,22 +55,20 @@
 
   function switchSlide(mode, page) {
     isSliding = true;
+    switchPage(mode, page);
+    switchButtons();
+
     switch (mode) {
       case SliderMode.PREV:
-        switchPage(mode);
-        switchButtons();
         currentTranslateValue += moveLength;
         break;
       case SliderMode.NEXT:
-        switchPage(mode);
-        switchButtons();
         currentTranslateValue -= moveLength;
         break;
       case SliderMode.PAGE:
-        switchPage(mode, page);
-        switchButtons();
         currentTranslateValue = -page * moveLength;
     }
+
     slidesContainer.style.transform = `translateX(${currentTranslateValue}px)`;
     setTimeout(() => {
       isSliding = false;
