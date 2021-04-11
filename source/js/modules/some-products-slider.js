@@ -6,6 +6,7 @@
   const sliderPagination = slider.querySelector('.slider__pagination');
   const sliderButtonPrev = slider.querySelector('.slider__button-prev');
   const sliderButtonNext = slider.querySelector('.slider__button-next');
+  const sliderPaginationShort = slider.querySelector('.slider__page-short');
 
   const sliderSettings = {
     slidesContainer,
@@ -26,6 +27,11 @@
       DESKTOP: 3,
       TABLET: 6,
       MOBILE: 6,
+    },
+    paginationShortMode: {
+      DESKTOP: false,
+      TABLET: false,
+      MOBILE: sliderPaginationShort,
     }
   };
 

@@ -4,8 +4,10 @@
   const SliderMode = window.const.SliderMode;
   const TRANSITION_DURATION = 800;
   const Breakpoints = window.const.Breakpoints;
+  const TOUCH_DELAY = 300;
+  const MIN_SWIPE_LENGTH = 50;
 
-  window.slider = function ({slidesContainer, sliderPagination, sliderButtonPrev, sliderButtonNext, moveLengthPerc, slidesPerSwitch, pagesQuantity}) {
+  window.slider = function ({slidesContainer, sliderPagination, sliderButtonPrev, sliderButtonNext, moveLengthPerc, slidesPerSwitch, pagesQuantity, paginationShortMode}) {
     let isSliding = false;
     let moveLength = null;
     let currentBreakpoint = null;
@@ -46,6 +48,9 @@
           currentPage = page;
       }
       sliderPagination.children[currentPage].classList.add('slider__page--current');
+      if (paginationShortMode[currentBreakpoint]) {
+        paginationShortMode[currentBreakpoint].textContent = currentPage + 1;
+      }
     }
 
     function switchSlide(mode, page) {
@@ -79,7 +84,7 @@
       const lastBreakpoint = currentBreakpoint;
       getBreakpoint();
       const savedPage = Math.trunc(currentPage * slidesPerSwitch[lastBreakpoint] / slidesPerSwitch[currentBreakpoint]);
-      if (lastBreakpoint !== currentBreakpoint && savedPage !== currentPage) {
+      if (lastBreakpoint !== currentBreakpoint) {
         switchPage(SliderMode.PAGE, savedPage);
       }
       getMoveLength();
@@ -108,8 +113,71 @@
 
       window.addEventListener('resize', sliderResizeHandler);
     }
+
+    function swipeSlide(moveX) {
+      if (moveX > 0 && currentPage !== 0) {
+        switchSlide(SliderMode.PREV);
+      }
+      if (moveX < 0 && currentPage !== pagesQuantity[currentBreakpoint] - 1) {
+        switchSlide(SliderMode.NEXT);
+      }
+    }
+
+    function longTouchHandler(moveX) {
+      slidesContainer.style.transform = `translateX(${currentTranslateValue}px)`;
+      if (Math.abs(moveX) >= moveLength / 2) {
+        swipeSlide(moveX);
+      }
+    }
+
+    function touchStartHandler(startEvt) {
+      const startCoord = {
+        X: startEvt.touches[0].clientX,
+        Y: startEvt.touches[0].clientY,
+      };
+      let move = {};
+      let temporaryTranslateValue = currentTranslateValue;
+      const startTime = new Date();
+      let currentTime = null;
+
+      function touchMoveHandler(moveEvt) {
+        const newCoord = {
+          X: moveEvt.touches[0].clientX,
+          Y: moveEvt.touches[0].clientY,
+        };
+        move.X = newCoord.X - startCoord.X;
+        move.Y = newCoord.Y - startCoord.Y;
+        if (Math.abs(move.Y) > MIN_SWIPE_LENGTH) {
+          return;
+        }
+        currentTime = new Date();
+        if (currentTime - startTime >= TOUCH_DELAY) {
+          slidesContainer.style.transform = `translateX(${temporaryTranslateValue + move.X}px)`;
+        }
+      }
+
+      slidesContainer.addEventListener('touchmove', touchMoveHandler);
+      slidesContainer.addEventListener('touchend', touchEndHandler);
+
+      function touchEndHandler() {
+        slidesContainer.removeEventListener('touchmove', touchMoveHandler);
+        slidesContainer.removeEventListener('touchend', touchEndHandler);
+        if (Math.abs(move.Y) > MIN_SWIPE_LENGTH) {
+          slidesContainer.style.transform = `translateX(${currentTranslateValue}px)`;
+          return;
+        }
+        if (currentTime - startTime < TOUCH_DELAY && Math.abs(move.X) >= MIN_SWIPE_LENGTH) {
+          swipeSlide(move.X);
+        } else {
+          longTouchHandler(move.X);
+        }
+      }
+    }
     return function () {
       init();
+      if (currentBreakpoint === 'MOBILE') {
+        slidesContainer.addEventListener('touchstart', touchStartHandler);
+      }
     };
   };
 })();
