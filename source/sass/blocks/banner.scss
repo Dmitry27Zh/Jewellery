@@ -1,6 +1,8 @@
 .banner {
   position: relative;
-  padding: 180px 0;
+  padding-top: 180px;
+  padding-bottom: 180px;
+  line-height: 1.3;
   font-family: $font-family-additional;
   text-align: center;
   color: $white;
@@ -13,8 +15,8 @@
   h2 {
     margin: 0;
     font-size: 45px;
-    line-height: 58.5px;
     letter-spacing: 3%;
+    text-transform: uppercase;
   }
 
   h3 {
@@ -23,7 +25,6 @@
     font-style: italic;
     font-weight: 400;
     font-size: 38px;
-    line-height: 49.4px;
   }
 
   @media (min-resolution: 2dppx) {
@@ -43,16 +44,54 @@
 
     h2 {
       font-size: 38px;
-      line-height: 49.4px;
     }
 
     h3 {
       font-size: 34px;
-      line-height: 44.2px;
     }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/headline-bg-mobile@2x.jpg");
+    }
+  }
+
+  &--inner {
+    padding-top: 91px;
+    padding-bottom: 94px;
+    background-image: url("../img/catalog-headline-bg@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-headline-bg@2x.jpg");
+    }
+
+    @media (max-width: $tablet-width-max) {
+      padding-top: 92px;
+      padding-bottom: 96px;
+      background-image: url("../img/catalog-headline-bg-tablet@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/catalog-headline-bg-tablet@2x.jpg");
+      }
+    }
+
+    @media (max-width: $mobile-width-max) {
+      padding-top: 78px;
+      padding-bottom: 82px;
+      background-image: url("../img/catalog-headline-bg-mobile@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/catalog-headline-bg-mobile@2x.jpg");
+      }
+    }
+
+    h2 {
+      font-size: 34px;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-weight: 500;
+      font-size: 22px;
     }
   }
 }
