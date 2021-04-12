@@ -53,6 +53,9 @@
     &::after {
       top: 46px;
       right: 57px;
+      transition-property: transform;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in;
 
       @media (max-width: $mobile-width-max) {
         top: 20px;
@@ -81,14 +84,6 @@
 .faq__item.accordion--opened {
   h3 {
     padding-bottom: 0;
-
-    &::after {
-      transform: translateY(2px) rotate(-135deg);
-
-      @media (max-width: $mobile-width-max) {
-        transform: translateY(7px) rotate(-135deg);
-      }
-    }
   }
 
   .faq__item-answer {

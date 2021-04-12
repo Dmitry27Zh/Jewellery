@@ -1,0 +1,63 @@
+.range-filter {
+  margin-top: -12px;
+  padding: 0 25px 20px;
+}
+
+.range-filter__controls {
+  position: relative;
+  padding-top: 7px;
+}
+
+.range-filter__scale {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background-color: $warm-white;
+}
+
+.range-filter__bar {
+  position: absolute;
+  top: 0;
+  left: 22.5%;
+  right: 25%;
+  height: 100%;
+  background-color: $brown;
+}
+
+.range-filter__toggle {
+  position: absolute;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  background-color: $brown;
+  border-radius: 50%;
+
+  &--min {
+    left: 22.5%;
+  }
+
+  &--max {
+    left: 75%;
+  }
+}
+
+.range-filter__price-controls {
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 10px;
+  padding-left: 22.5%;
+
+  input {
+    width: 34px;
+  }
+
+  label {
+    display: flex;
+    font-size: 14px;
+    line-height: 18.2px;
+
+    &:first-child {
+      margin-right: 34%;
+    }
+  }
+}
