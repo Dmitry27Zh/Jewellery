@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jewellery store — main</title>
+    <title>Jewellery store — catalog</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.min.css">
   </head>
@@ -57,6 +57,7 @@
 </header>
 
     <main>
+      <h1 class="visually-hidden">Choose product</h1>
       <section class="banner banner--inner wrapper">
         <h2>ALL JEWELLERY</h2>
         <h3>Discover picks of fashion's finest trends in our jewellery catalog</h3>
@@ -133,6 +134,136 @@
             <button class="button button--colorized" type="submit">Apply</button>
             <button class="button" type="reset">Clear All</button>
           </form>
+        </section>
+        <section class="catalog-products slider">
+          <h2 class="visually-hidden">Products list</h2>
+          <div class="catalog-products__inner slider__wrapper">
+            <ul class="catalog-products__pages slider__list">
+              <li class="catalog-products__pages-item slider__item">
+                <ul class="catalog-products__list">
+                  <li class="product">
+                    <div class="product__picture">
+                      <picture>
+                        <img src="img/catalog-product-1@1x.jpg" srcset="img/catalog-product-1@2x.jpg 2x" width="270" height="272" alt="Product photo">
+                      </picture>
+                    </div>
+                    <h3>Double pearl earrings</h3>
+                    <p>$ 115</p>
+                  </li>
+                  <li class="product">
+                    <div class="product__picture">
+                      <picture>
+                        <img src="img/catalog-product-2@1x.jpg" srcset="img/catalog-product-2@2x.jpg 2x" width="270" height="272" alt="Product photo">
+                      </picture>
+                    </div>
+                    <h3>Choker with gold bead</h3>
+                    <p>$ 55</p>
+                  </li>
+                  <li class="product">
+                    <div class="product__picture">
+                      <picture>
+                        <img src="img/catalog-product-3@1x.jpg" srcset="img/catalog-product-3@2x.jpg 2x" width="270" height="272" alt="Product photo">
+                      </picture>
+                    </div>
+                    <h3>Gold layered necklace</h3>
+                    <p>$ 155</p>
+                  </li>
+                  <li class="product">
+                    <div class="product__picture">
+                      <picture>
+                        <img src="img/catalog-product-4@1x.jpg" srcset="img/catalog-product-4@2x.jpg 2x" width="270" height="272" alt="Product photo">
+                      </picture>
+                    </div>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>$ 105</p>
+                  </li>
+                  <li class="product">
+                    <div class="product__picture">
+                      <picture>
+                        <img src="img/catalog-product-5@1x.jpg" srcset="img/catalog-product-5@2x.jpg 2x" width="270" height="272" alt="Product photo">
+                      </picture>
+                    </div>
+                    <h3>Boho earrings</h3>
+                    <p>$ 75</p>
+                  </li>
+                  <li class="product">
+                    <div class="product__picture">
+                      <picture>
+                        <img src="img/catalog-product-6@1x.jpg" srcset="img/catalog-product-6@2x.jpg 2x" width="270" height="272" alt="Product photo">
+                      </picture>
+                    </div>
+                    <h3>Gold bird necklace</h3>
+                    <p>$ 135</p>
+                  </li>
+                  <li class="product">
+                    <div class="product__picture">
+                      <picture>
+                        <img src="img/catalog-product-7@1x.jpg" srcset="img/catalog-product-7@2x.jpg 2x" width="270" height="272" alt="Product photo">
+                      </picture>
+                    </div>
+                    <h3>Black leather choker</h3>
+                    <p>$ 85</p>
+                  </li>
+                  <li class="product">
+                    <div class="product__picture">
+                      <picture>
+                        <img src="img/catalog-product-8@1x.jpg" srcset="img/catalog-product-8@2x.jpg 2x" width="270" height="272" alt="Product photo">
+                      </picture>
+                    </div>
+                    <h3>Necklace with amethyst</h3>
+                    <p>$ 145</p>
+                  </li>
+                  <li class="product">
+                    <div class="product__picture">
+                      <picture>
+                        <img src="img/catalog-product-9@1x.jpg" srcset="img/catalog-product-9@2x.jpg 2x" width="270" height="272" alt="Product photo">
+                      </picture>
+                    </div>
+                    <h3>Elephant earrings</h3>
+                    <p>$ 95</p>
+                  </li>
+                  <li class="product">
+                    <div class="product__picture">
+                      <picture>
+                        <img src="img/catalog-product-10@1x.jpg" srcset="img/catalog-product-10@2x.jpg 2x" width="270" height="272" alt="Product photo">
+                      </picture>
+                    </div>
+                    <h3>Threader necklace</h3>
+                    <p>$ 115</p>
+                  </li>
+                  <li class="product">
+                    <div class="product__picture">
+                      <picture>
+                        <img src="img/catalog-product-11@1x.jpg" srcset="img/catalog-product-11@2x.jpg 2x" width="270" height="272" alt="Product photo">
+                      </picture>
+                    </div>
+                    <h3>Origami crane necklace</h3>
+                    <p>$ 105</p>
+                  </li>
+                  <li class="product">
+                    <div class="product__picture">
+                      <picture>
+                        <img src="img/catalog-product-12@1x.jpg" srcset="img/catalog-product-12@2x.jpg 2x" width="270" height="272" alt="Product photo">
+                      </picture>
+                    </div>
+                    <h3>Marble earrings</h3>
+                    <p>$ 95</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="catalog-products__pagination slider__pagination">
+              <li class="catalog-products__page slider__page slider__page--current"><a href="#">1</a></li>
+              <li class="catalog-products__page slider__page"><a href="#">2</a></li>
+              <li class="catalog-products__page slider__page"><a href="#">3</a></li>
+              <li class="catalog-products__page slider__page"><a href="#">4</a></li>
+              <li class="catalog-products__page slider__page"><a href="#">5</a></li>
+            </ul>
+            <div class="catalog-products__buttons">
+              <button class="catalog-products__button">Previous</button>
+              <button class="catalog-products__button">Next</button>
+            </div>
+          </div>
         </section>
       </div>
     </main>
