@@ -29,6 +29,10 @@
   padding: 0 7.5px;
   color: $aside-gray;
 
+  @media (max-width: $mobile-width-max) {
+    padding: 0 12.5px;
+  }
+
   &--current {
     color: $deep-dark;
   }

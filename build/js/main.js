@@ -260,7 +260,31 @@
 'use strict';
 
 (function () {
-  const slider = document.querySelector('.slider');
+  window.modal = {};
+
+  window.modal.init = function (modalElement, openElement, closeElement, openedClassName, nojsClassName) {
+    modalElement.classList.remove(nojsClassName);
+    openElement.addEventListener('click', function () {
+      modalElement.classList.add(openedClassName);
+      document.body.classList.add('lock');
+      closeElement.addEventListener('click', modalCloseClickHandler);
+    });
+
+    function modalCloseClickHandler() {
+      modalElement.classList.remove(openedClassName);
+      document.body.classList.remove('lock');
+      closeElement.removeEventListener('click', modalCloseClickHandler);
+    }
+  };
+})();
+
+'use strict';
+
+(function () {
+  const slider = document.querySelector('.some-products__slider');
+  if (!slider) {
+    return;
+  }
   const slidesContainer = slider.querySelector('.slider__list');
   const sliderPagination = slider.querySelector('.slider__pagination');
   const sliderButtonPrev = slider.querySelector('.slider__button-prev');
@@ -296,4 +320,16 @@
 
   const initSlider = window.slider(sliderSettings);
   initSlider();
+})();
+
+'use strict';
+
+(function () {
+  const filterElement = document.querySelector('.filter');
+  const filterOpenElement = document.querySelector('.filter__open');
+  const filterCloseElement = document.querySelector('.filter__close');
+  if (!filterElement || !filterOpenElement || !filterCloseElement) {
+    return;
+  }
+  window.modal.init(filterElement, filterOpenElement, filterCloseElement, 'filter--opened', 'filter--no-js');
 })();

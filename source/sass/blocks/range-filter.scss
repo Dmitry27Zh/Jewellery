@@ -1,6 +1,15 @@
 .range-filter {
   margin-top: -12px;
   padding: 0 25px 20px;
+
+  @media (max-width: $tablet-width-max) {
+    padding: 0 88px 40px 50px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    margin-top: 0;
+    padding: 0 10px 24px;
+  }
 }
 
 .range-filter__controls {
@@ -22,6 +31,16 @@
   right: 25%;
   height: 100%;
   background-color: $brown;
+
+  @media (max-width: $tablet-width-max) {
+    left: 45px;
+    right: 83px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    left: 40px;
+    right: 72px;
+  }
 }
 
 .range-filter__toggle {
@@ -32,12 +51,33 @@
   background-color: $brown;
   border-radius: 50%;
 
+  @media (max-width: $tablet-width-max) {
+    width: 18px;
+    height: 18px;
+  }
+
   &--min {
     left: 22.5%;
+
+    @media (max-width: $tablet-width-max) {
+      left: 45px;
+    }
+
+    @media (max-width: $mobile-width-max) {
+      left: 40px;
+    }
   }
 
   &--max {
     left: 75%;
+
+    @media (max-width: $tablet-width-max) {
+      left: 221px;
+    }
+
+    @media (max-width: $mobile-width-max) {
+      left: 178px;
+    }
   }
 }
 
@@ -46,6 +86,15 @@
   box-sizing: border-box;
   margin-top: 10px;
   padding-left: 22.5%;
+
+  @media (max-width: $tablet-width-max) {
+    margin-top: 20px;
+    padding-left: 37px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    padding-left: 32px;
+  }
 
   input {
     width: 34px;
@@ -58,6 +107,14 @@
 
     &:first-child {
       margin-right: 34%;
+
+      @media (max-width: $tablet-width-max) {
+        margin-right: 139px;
+      }
+
+      @media (max-width: $mobile-width-max) {
+        margin-right: 101px;
+      }
     }
   }
 }

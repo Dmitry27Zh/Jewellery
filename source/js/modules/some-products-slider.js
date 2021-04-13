@@ -1,7 +1,10 @@
 'use strict';
 
 (function () {
-  const slider = document.querySelector('.slider');
+  const slider = document.querySelector('.some-products__slider');
+  if (!slider) {
+    return;
+  }
   const slidesContainer = slider.querySelector('.slider__list');
   const sliderPagination = slider.querySelector('.slider__pagination');
   const sliderButtonPrev = slider.querySelector('.slider__button-prev');
