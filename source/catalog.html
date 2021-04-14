@@ -20,79 +20,87 @@
           <h2 class="visually-hidden">Set filter</h2>
           <button class="filter__open button button--colorized">Filter</button>
           <div class="filter__overlay"></div>
-          <div class="filter__wrapper">
-            <form class="filter__form" action="https://echo.htmlacademy.ru/">
-              <div class="filter__form-wrapper">
-                <fieldset class="filter__form-group accordion accordion--opened accordion--no-close">
-                  <legend>Product</legend>
-                  <ul class="filter__options-list">
-                    <li class="filter__option">
-                      <input class="visually-hidden" type="checkbox" id="necklaces" name="necklaces" checked />
-                      <label for="necklaces">Necklaces</label>
-                    </li>
-                    <li class="filter__option">
-                      <input class="visually-hidden" type="checkbox" id="chokers" name="chokers" checked />
-                      <label for="chokers">Chokers</label>
-                    </li>
-                    <li class="filter__option">
-                      <input class="visually-hidden" type="checkbox" id="rings" name="rings" />
-                      <label for="rings">Rings</label>
-                    </li>
-                    <li class="filter__option">
-                      <input class="visually-hidden" type="checkbox" id="earrings" name="earrings" checked />
-                      <label for="earrings">Earrings</label>
-                    </li>
-                  </ul>
-                </fieldset>
-                <fieldset class="filter__form-group accordion accordion--opened">
-                  <legend>Material</legend>
-                  <ul class="filter__options-list">
-                    <li class="filter__option">
-                      <input class="visually-hidden" type="checkbox" id="gold" name="gold" checked />
-                      <label for="gold">Gold</label>
-                    </li>
-                    <li class="filter__option">
-                      <input class="visually-hidden" type="checkbox" id="silver" name="silver" />
-                      <label for="silver">Silver</label>
-                    </li>
-                  </ul>
-                </fieldset>
-                <fieldset class="filter__form-group accordion accordion--opened">
-                  <legend>Collection</legend>
-                  <ul class="filter__options-list">
-                    <li class="filter__option">
-                      <input class="visually-hidden" type="checkbox" id="pink-flamingo" name="pink-flamingo" checked />
-                      <label for="pink-flamingo">Pink flamingo</label>
-                    </li>
-                    <li class="filter__option">
-                      <input class="visually-hidden" type="checkbox" id="dreams" name="dreams" />
-                      <label for="dreams">Dreams</label>
-                    </li>
-                  </ul>
-                </fieldset>
-                <div
-                  class="filter__form-group filter__form-group--price accordion accordion--opened accordion--no-close"
-                >
-                  <h3>Price</h3>
-                  <div class="filter__form-group-inner range-filter">
-                    <div class="range-filter__controls">
-                      <div class="range-filter__scale">
-                        <div class="range-filter__bar"></div>
+          <div class="filter__modal">
+            <div class="filter__wrapper">
+              <form class="filter__form" action="https://echo.htmlacademy.ru/">
+                <div class="filter__form-wrapper">
+                  <fieldset class="filter__form-group accordion accordion--opened accordion--no-close">
+                    <legend>Product</legend>
+                    <ul class="filter__options-list">
+                      <li class="filter__option">
+                        <input class="visually-hidden" type="checkbox" id="necklaces" name="necklaces" checked />
+                        <label for="necklaces">Necklaces</label>
+                      </li>
+                      <li class="filter__option">
+                        <input class="visually-hidden" type="checkbox" id="chokers" name="chokers" checked />
+                        <label for="chokers">Chokers</label>
+                      </li>
+                      <li class="filter__option">
+                        <input class="visually-hidden" type="checkbox" id="rings" name="rings" />
+                        <label for="rings">Rings</label>
+                      </li>
+                      <li class="filter__option">
+                        <input class="visually-hidden" type="checkbox" id="earrings" name="earrings" checked />
+                        <label for="earrings">Earrings</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <fieldset class="filter__form-group accordion accordion--opened">
+                    <legend>Material</legend>
+                    <ul class="filter__options-list">
+                      <li class="filter__option">
+                        <input class="visually-hidden" type="checkbox" id="gold" name="gold" checked />
+                        <label for="gold">Gold</label>
+                      </li>
+                      <li class="filter__option">
+                        <input class="visually-hidden" type="checkbox" id="silver" name="silver" />
+                        <label for="silver">Silver</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <fieldset class="filter__form-group accordion accordion--opened">
+                    <legend>Collection</legend>
+                    <ul class="filter__options-list">
+                      <li class="filter__option">
+                        <input
+                          class="visually-hidden"
+                          type="checkbox"
+                          id="pink-flamingo"
+                          name="pink-flamingo"
+                          checked
+                        />
+                        <label for="pink-flamingo">Pink flamingo</label>
+                      </li>
+                      <li class="filter__option">
+                        <input class="visually-hidden" type="checkbox" id="dreams" name="dreams" />
+                        <label for="dreams">Dreams</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <div
+                    class="filter__form-group filter__form-group--price accordion accordion--opened accordion--no-close"
+                  >
+                    <h3>Price</h3>
+                    <div class="filter__form-group-inner range-filter">
+                      <div class="range-filter__controls">
+                        <div class="range-filter__scale">
+                          <div class="range-filter__bar"></div>
+                        </div>
+                        <div class="range-filter__toggle range-filter__toggle--min"></div>
+                        <div class="range-filter__toggle range-filter__toggle--max"></div>
                       </div>
-                      <div class="range-filter__toggle range-filter__toggle--min"></div>
-                      <div class="range-filter__toggle range-filter__toggle--max"></div>
-                    </div>
-                    <div class="range-filter__price-controls">
-                      <label>$<input type="number" name="min-price" value="55" /></label>
-                      <label>$<input type="number" name="max-price" value="155" /></label>
+                      <div class="range-filter__price-controls">
+                        <label>$<input type="number" name="min-price" value="55" /></label>
+                        <label>$<input type="number" name="max-price" value="155" /></label>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <button class="button button--colorized" type="submit">Apply</button>
-              <button class="button" type="reset">Clear All</button>
-            </form>
-            <button class="filter__close"><span class="visually-hidden">Close filter</span></button>
+                <button class="button button--colorized" type="submit">Apply</button>
+                <button class="button" type="reset">Clear All</button>
+              </form>
+              <button class="filter__close"><span class="visually-hidden">Close filter</span></button>
+            </div>
           </div>
         </section>
         <section class="catalog-products slider">
