@@ -9,7 +9,92 @@
   </head>
   <body>
     <include src="./source/parts/header.html"></include>
-    <main></main>
+    <main>
+      <section class="product-card wrapper section">
+        <h2 class="visually-hidden">Product card</h2>
+        <div class="product-card__inner">
+          <ul class="product-card__pictures">
+            <li class="product-card__picture">
+              <picture>
+                <img
+                  src="img/gold-necklace-1@1x.jpg"
+                  srcset="img/gold-necklace-1@2x.jpg 2x"
+                  width="100"
+                  height="125"
+                  alt="Product"
+                />
+              </picture>
+            </li>
+            <li class="product-card__picture">
+              <picture>
+                <img
+                  src="img/gold-necklace-2@1x.jpg"
+                  srcset="img/gold-necklace-2@2x.jpg 2x"
+                  width="100"
+                  height="125"
+                  alt="Product"
+                />
+              </picture>
+            </li>
+            <li class="product-card__picture">
+              <picture>
+                <img
+                  src="img/gold-necklace-3@1x.jpg"
+                  srcset="img/gold-necklace-3@2x.jpg 2x"
+                  width="100"
+                  height="125"
+                  alt="Product"
+                />
+              </picture>
+            </li>
+            <li class="product-card__picture product-card__picture--big">
+              <picture>
+                <img
+                  src="img/gold-necklace-big@1x.jpg"
+                  srcset="img/gold-necklace-big@2x.jpg 2x"
+                  width="470"
+                  height="435"
+                  alt="Product"
+                />
+              </picture>
+            </li>
+          </ul>
+          <div class="product-card__info">
+            <h3>Gold Necklace</h3>
+            <p>$ 115</p>
+            <ul class="product-card__info-nav">
+              <li class="product-card__info-nav-item">
+                <a href="#">Description</a>
+              </li>
+              <li class="product-card__info-nav-item product-card__info-nav-item--current">
+                <a href="#">Additional info</a>
+              </li>
+            </ul>
+            <table class="product-card__properties">
+              <tr>
+                <th>Metal type</th>
+                <td>Gold 585</td>
+              </tr>
+              <tr>
+                <th>Stone</th>
+                <td>Turquoise</td>
+              </tr>
+              <tr>
+                <th>Size</th>
+                <td>18” / 20”</td>
+              </tr>
+            </table>
+            <button class="button button--colorized product-card__button">Add to cart</button>
+            <footer class="product-card__service">
+              <h4 class="visually-hidden">Service info</h4>
+              <p>14 Day Returns</p>
+              <p>2-Year Warranty</p>
+              <p>Free Shipping</p>
+            </footer>
+          </div>
+        </div>
+      </section>
+    </main>
     <include src="./source/parts/footer.html"></include>
   </body>
 </html>

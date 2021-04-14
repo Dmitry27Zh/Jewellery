@@ -1,0 +1,136 @@
+.product-card {
+  padding-top: 80px;
+  line-height: 1.3;
+  border-top: 1px solid $decorative-white;
+}
+
+.product-card__inner {
+  display: flex;
+}
+
+.product-card__pictures {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: 16.666% 1fr;
+  grid-template-rows: repeat(3, min-content);
+  gap: 2.196vw;
+  width: 51.282%;
+}
+
+.product-card__picture {
+  grid-column: 1/2;
+
+  &--big {
+    grid-column: 2/2;
+    grid-row: 1/-1;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.product-card__info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: -10px;
+  padding: 0 8.547%;
+
+  h3 {
+    font-size: 34px;
+  }
+
+  p {
+    margin-top: 11px;
+    margin-bottom: 34px;
+    font-weight: normal;
+    font-size: 26px;
+  }
+}
+
+.product-card__info-nav {
+  @include list-reset;
+  display: flex;
+}
+
+.product-card__info-nav-item {
+  color: $aside-gray;
+  margin-right: 35px;
+
+  &--current {
+    color: $deep-dark;
+  }
+}
+
+.product-card__properties {
+  width: 100%;
+  margin: 20px 0;
+  font-size: 14px;
+
+  tr {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+
+    &:not(:first-child) {
+      border-bottom: 1px solid $decorative-white;
+    }
+  }
+
+  th {
+    padding: 0;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  td {
+    font-weight: 400;
+    text-align: right;
+  }
+}
+
+.product-card__button {
+  width: 100%;
+  margin-top: auto;
+}
+
+.product-card__service {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding-bottom: 5px;
+  color: $aside-gray;
+
+  p {
+    margin: 0;
+    font-size: 1.024vw;
+
+    &:first-of-type,
+    &:last-of-type {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        width: 1px;
+        height: 20px;
+        background-color: $decorative-white;
+        content: "";
+      }
+    }
+
+    &:first-of-type {
+      &::before {
+        right: -0.951vw;
+      }
+    }
+
+    &:last-child {
+      &::before {
+        left: -0.951vw;
+      }
+    }
+  }
+}

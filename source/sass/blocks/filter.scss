@@ -251,4 +251,9 @@ input[type="checkbox"]:checked + label::before {
   &::after {
     background-color: $white;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
 }
