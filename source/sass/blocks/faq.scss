@@ -4,18 +4,26 @@
 
   @media (max-width: $tablet-width-max) {
     padding-top: 5px;
-    padding-bottom: 40px;
+    padding-bottom: 21px;
   }
 
   h2 {
     margin-bottom: 50px;
     text-align: center;
+
+    @media (max-width: $tablet-width-max) {
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: $mobile-width-max) {
+      margin-bottom: 28px;
+    }
   }
 }
 
 .faq__list {
   @include list-reset;
-  width: 85.905%;
+  width: 82.905%;
   margin: 0 auto;
   border: 1px solid $brown;
 
@@ -33,15 +41,14 @@
 
   h3 {
     position: relative;
-    padding: 42px;
-    padding-right: 110px;
+    padding: 44px 110px 46px 42px;
     font-weight: 500;
     font-size: 18px;
     line-height: 23.4px;
     font-family: $font-family-main;
 
     @media (max-width: $tablet-width-max) {
-      padding: 45px 120px 45px 50px;
+      padding: 43px 120px 45px 50px;
     }
 
     @media (max-width: $mobile-width-max) {
@@ -52,29 +59,34 @@
 
     &::after {
       top: 46px;
-      right: 57px;
+      right: 52px;
       transition-property: transform;
       transition-duration: 0.3s;
       transition-timing-function: ease-in;
 
+      @media (max-width: $tablet-width-max) {
+        top: 44px;
+        right: 55px;
+      }
+
       @media (max-width: $mobile-width-max) {
         top: 20px;
-        right: 25px;
+        right: 29px;
       }
     }
   }
 
   p {
     margin: 0;
-    padding: 5px 50px 39px;
+    padding: 8px 400px 39px 50px;
     font-weight: 400;
 
     @media (max-width: $tablet-width-max) {
-      padding: 15px 50px 33px;
+      padding: 25px 101px 46px 50px;
     }
 
     @media (max-width: $mobile-width-max) {
-      padding: 2px 61px 7px 25px;
+      padding: 15px 61px 22px 25px;
       font-size: 14px;
       line-height: 19.6px;
     }

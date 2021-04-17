@@ -2,11 +2,16 @@
   text-align: center;
 
   h3 {
-    margin-top: 18px;
+    margin-top: 21px;
     margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     font-family: $font-family-main;
+
+    @media (max-width: $mobile-width-max) {
+      margin-top: 17px;
+      margin-bottom: 6px;
+    }
   }
 
   p {

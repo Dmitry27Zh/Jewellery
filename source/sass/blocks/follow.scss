@@ -1,7 +1,29 @@
 .follow {
-  padding-top: 54px;
+  padding-top: 50px;
   padding-bottom: 130px;
   text-align: center;
+
+  @media (max-width: $tablet-width-max) {
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+}
+
+.follow__link {
+  margin-top: 32px;
+
+  @media (max-width: $tablet-width-max) {
+    margin-top: 22px;
+    margin-bottom: 61px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 47px;
+  }
 }
 
 .follow__inner {

@@ -1,6 +1,6 @@
 .some-products {
-  padding-top: 118px;
-  padding-bottom: 118px;
+  padding-top: 121px;
+  padding-bottom: 114px;
   text-align: center;
 
   @media (max-width: $tablet-width-max) {
@@ -9,7 +9,7 @@
   }
 
   @media (max-width: $mobile-width-max) {
-    padding-top: 55px;
+    padding-top: 60px;
     padding-bottom: 53px;
   }
 }
@@ -30,10 +30,10 @@
 }
 
 .some-products__pagination {
-  margin-top: 60px;
+  margin-top: 50px;
 
   @media (max-width: $tablet-width-max) {
-    margin-top: 50px;
+    margin-top: 40px;
   }
 
   @media (max-width: $mobile-width-max) {
@@ -42,10 +42,14 @@
 }
 
 .some-products__pagination-short {
-  margin-top: 28px;
+  margin-top: 35px;
 
   @media (min-width: $tablet-width-min) {
     display: none;
+  }
+
+  span {
+    padding: 0 5px;
   }
 }
 
@@ -61,7 +65,7 @@
   @include button-reset;
   position: absolute;
   top: -108px;
-  left: 7.174vw;
+  left: 6.174vw;
 
   &--next {
     left: auto;
@@ -70,6 +74,23 @@
 
   &:disabled {
     opacity: 0.5;
+  }
+
+  @media (max-width: $tablet-width-max) {
+    top: -97px;
+
+    &--prev {
+      left: 5.859vw;
+    }
+
+    &--next {
+      right: 5.859vw;
+    }
+
+    svg {
+      width: 36px;
+      height: 15px;
+    }
   }
 
   @media (max-width: $mobile-width-max) {
