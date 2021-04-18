@@ -114,5 +114,5 @@ gulp.task('deploy', function () {
     .pipe(ghPages());
 })
 
-gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'html', 'js'));
+gulp.task('build', gulp.series('clean', 'copy', 'css', 'images', 'webp', 'sprite', 'html', 'js'));
 gulp.task('start', gulp.series('build', 'server'));
