@@ -46,6 +46,8 @@
           input.removeEventListener('blur', inputBlurHandler);
         }
 
+        isInputInFocus = false;
+
         document.removeEventListener('keydown', keydownHandler);
 
         if (cbOnClose) {

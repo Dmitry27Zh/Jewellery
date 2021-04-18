@@ -5,17 +5,27 @@
     display: block;
 
     .modal__overlay {
+      position: fixed;
+      display: block;
       animation: appearence 0.4s ease-in-out;
     }
 
     .modal__inner {
+      position: fixed;
       animation: drop 0.4s ease-in-out;
+    }
+
+    .modal__close {
+      display: block;
     }
   }
 }
 
+.header + .modal {
+  display: block;
+}
+
 .modal__inner {
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -26,6 +36,7 @@
 }
 
 .modal__overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -38,6 +49,7 @@
   @include button-reset;
   @include pseudo-close-btn;
   position: absolute;
+  display: none;
   top: 15px;
   right: 15px;
   width: 25px;
