@@ -76,7 +76,6 @@
               <picture>
                 <!-- 1x 100px, 125px -->
                 <source type="image/webp" srcset="img/gold-necklace-2@1x.webp 1x, img/gold-necklace-2@2x.webp 2x">
-                \
                 <!-- 1x 100px, 125px -->
                 <img src="img/gold-necklace-2@1x.jpg" srcset="img/gold-necklace-2@2x.jpg 2x" width="100" height="125" alt="Product">
               </picture>
@@ -387,11 +386,11 @@
     <form class="login-modal__form" action="https://echo.htmlacademy.ru/" method="POST">
       <div class="login-modal__input login-modal__input--email">
         <label class="visually-hidden" for="login-email">Enter your email</label>
-        <input type="email" id="login-email" name="email" placeholder="Your E-mail">
+        <input type="email" id="login-email" name="email" placeholder="Your E-mail" required="">
       </div>
       <div class="login-modal__input login-modal__input--password">
         <label class="visually-hidden" for="login-email">Enter your password</label>
-        <input type="password" id="login-password" name="password" placeholder="Password">
+        <input type="password" id="login-password" name="password" placeholder="Password" required="">
       </div>
       <a class="login-modal__forget" href="#">Forgot your password?</a>
       <button class="button button--colorized" type="submit">Log In</button>
