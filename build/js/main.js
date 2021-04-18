@@ -262,19 +262,37 @@
 (function () {
   window.modal = {};
 
-  window.modal.init = function (modalElement, openElement, closeElement, openedClassName, nojsClassName) {
-    modalElement.classList.remove(nojsClassName);
-    openElement.addEventListener('click', function () {
+  window.modal.init = function (modalElement, openElement, closeElementsList, openedClassName, nojsClassName) {
+    if (nojsClassName) {
+      modalElement.classList.remove(nojsClassName);
+    }
+
+    openElement.addEventListener('click', function (evt) {
+      evt.preventDefault();
       modalElement.classList.add(openedClassName);
       document.body.classList.add('lock');
-      closeElement.addEventListener('click', modalCloseClickHandler);
-    });
 
-    function modalCloseClickHandler() {
-      modalElement.classList.remove(openedClassName);
-      document.body.classList.remove('lock');
-      closeElement.removeEventListener('click', modalCloseClickHandler);
-    }
+      function closeModal() {
+        modalElement.classList.remove(openedClassName);
+        document.body.classList.remove('lock');
+        for (let closeElement of closeElementsList) {
+          closeElement.removeEventListener('click', modalCloseClickHandler);
+        }
+        document.removeEventListener('keydown', keydownHandler);
+      }
+
+      const modalCloseClickHandler = closeModal;
+      const keydownHandler = function (keyEvt) {
+        if (keyEvt.key === 'Escape') {
+          closeModal();
+        }
+      };
+
+      document.addEventListener('keydown', keydownHandler);
+      for (let closeElement of closeElementsList) {
+        closeElement.addEventListener('click', modalCloseClickHandler);
+      }
+    });
   };
 })();
 
@@ -325,11 +343,26 @@
 'use strict';
 
 (function () {
+  const loginModalElement = document.querySelector('.login-modal');
+  const loginModalCloseElement = loginModalElement && loginModalElement.querySelector('.login-modal__close');
+  const loginModalOverlayElement = loginModalElement && loginModalElement.querySelector('.modal__overlay');
+  const loginModalOpenElement = document.querySelector('.header__user-nav-link--login');
+  if (loginModalElement && loginModalOpenElement && loginModalCloseElement) {
+    window.modal.init(loginModalElement, loginModalOpenElement, [loginModalCloseElement, loginModalOverlayElement], 'modal--opened');
+  }
+  const cartModalElement = document.querySelector('.cart-modal');
+  const cartModalCloseElement = cartModalElement && cartModalElement.querySelector('.modal__close');
+  const cartModalOverlayElement = cartModalElement && cartModalElement.querySelector('.modal__overlay');
+  const productCardButton = document.querySelector('.product-card__button');
+
+  if (cartModalElement && cartModalCloseElement && cartModalOverlayElement && productCardButton) {
+    window.modal.init(cartModalElement, productCardButton, [cartModalCloseElement, cartModalOverlayElement], 'modal--opened');
+  }
+
   const filterElement = document.querySelector('.filter');
   const filterOpenElement = document.querySelector('.filter__open');
   const filterCloseElement = document.querySelector('.filter__close');
-  if (!filterElement || !filterOpenElement || !filterCloseElement) {
-    return;
+  if (filterElement && filterOpenElement && filterCloseElement) {
+    window.modal.init(filterElement, filterOpenElement, [filterCloseElement], 'filter--opened', 'filter--no-js');
   }
-  window.modal.init(filterElement, filterOpenElement, filterCloseElement, 'filter--opened', 'filter--no-js');
 })();

@@ -27,7 +27,7 @@
         </a>
         <ul class="header__user-nav">
           <li class="header__user-nav-item header__user-nav-item--login">
-            <a class="header__user-nav-link link" href="#">Login</a>
+            <a class="header__user-nav-link header__user-nav-link--login link" href="#">Login</a>
           </li>
           <li class="header__user-nav-item header__user-nav-item--cart">
             <a class="header__user-nav-link link" href="#">
@@ -385,6 +385,30 @@
     </section>
   </div>
 </footer>
+
+    <section class="section login-modal modal">
+  <div class="modal__overlay"></div>
+  <div class="login-modal__inner modal__inner">
+    <h2>Log In</h2>
+    <form class="login-modal__form" action="https://echo.htmlacademy.ru/" method="POST">
+      <div class="login-modal__input login-modal__input--email">
+        <label class="visually-hidden" for="login-email">Enter your email</label>
+        <input type="email" id="login-email" name="email" placeholder="Your E-mail">
+      </div>
+      <div class="login-modal__input login-modal__input--password">
+        <label class="visually-hidden" for="login-email">Enter your password</label>
+        <input type="password" id="login-password" name="password" placeholder="Password">
+      </div>
+      <a class="login-modal__forget" href="#">Forgot your password?</a>
+      <button class="button button--colorized" type="submit">Log In</button>
+    </form>
+    <div class="login-modal__sign">
+      <p>Don’t have an account?</p>
+      <a href="#">Sign up</a>
+    </div>
+    <button class="login-modal__close modal__close"><span class="visually-hidden">Close modal</span></button>
+  </div>
+</section>
 
     <script src="./js/main.js"></script>
   </body>

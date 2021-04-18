@@ -1,0 +1,90 @@
+.login-modal__inner {
+  width: 430px;
+  height: 586px;
+  padding: 187px 45px 60px;
+  box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24);
+  background-color: $warm-white;
+  background-image: url("../img/log-in-bg@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 138px;
+
+  @media (max-width: $tablet-width-max) {
+    width: 442px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    width: 270px;
+    height: 470px;
+    padding: 121px 15px 45px;
+    background-size: 100% 84px;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+    text-align: center;
+
+    @media (max-width: $mobile-width-max) {
+      margin-bottom: 19px;
+      font-size: 24px;
+    }
+  }
+}
+
+.login-modal__form {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    @include button-reset;
+    width: 100%;
+    padding: 9px 0;
+    border-bottom: 1px solid $deep-dark;
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 21px;
+      color: $aside-gray;
+    }
+  }
+}
+
+.login-modal__input {
+  &--password {
+    margin-top: 24px;
+
+    @media (max-width: $mobile-width-max) {
+      margin-top: 21px;
+    }
+  }
+}
+
+.login-modal__forget {
+  align-self: flex-end;
+  margin-top: 10px;
+  margin-bottom: 44px;
+  font-size: 12px;
+  line-height: 18px;
+  color: $aside-gray;
+
+  @media (max-width: $mobile-width-max) {
+    margin-top: 5px;
+    margin-bottom: 35px;
+  }
+}
+
+.login-modal__sign {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 21px;
+
+  p {
+    margin: 0;
+    margin-right: 5px;
+    color: $aside-gray;
+  }
+}

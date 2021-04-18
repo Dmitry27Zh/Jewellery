@@ -313,6 +313,46 @@
       </section>
     </main>
     <include src="./source/parts/footer.html"></include>
+    <include src="./source/parts/login-modal.html"></include>
+    <section class="section cart-modal modal">
+      <div class="cart-modal__overlay modal__overlay"></div>
+      <div class="cart-modal__inner modal__inner">
+        <h2>The item was added to&nbsp;your cart</h2>
+        <div class="cart-modal__item-add">
+          <div class="cart-modal__item-picture">
+            <picture>
+              <img
+                src="img/gold-necklace-2@1x.jpg"
+                srcset="img/gold-necklace-2@1x.jpg 2x"
+                width="84"
+                height="79"
+                alt="Product photo"
+              />
+            </picture>
+          </div>
+          <div class="cart-modal__item-text">
+            <h3>Gold Necklace</h3>
+            <p>$ 115</p>
+          </div>
+          <div class="cart-modal__item-controls">
+            <button class="cart-modal__item-btn cart-modal__item-btn--add"></button>
+            <span>1</span>
+            <button class="cart-modal__item-btn cart-modal__item-btn--delete"></button>
+          </div>
+        </div>
+        <div class="cart-modal__info">
+          <p>You have 1 item in the cart</p>
+          <p>Cart subtotal: $ 115</p>
+        </div>
+        <div class="cart-modal__buttons">
+          <a class="cart-modal__button cart-modal__button--continue button">Continue shopping</a>
+          <a class="cart-modal__button cart-modal__button--checkout button button--colorized">Checkout</a>
+        </div>
+        <button class="login-modal__close modal__close">
+          <span class="visually-hidden">Close modal</span>
+        </button>
+      </div>
+    </section>
     <script src="./js/main.js"></script>
   </body>
 </html>

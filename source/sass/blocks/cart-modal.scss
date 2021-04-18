@@ -1,0 +1,155 @@
+.cart-modal__inner {
+  width: 500px;
+  height: 439px;
+  padding: 50px 35px;
+  padding-bottom: 55px;
+
+  @media (max-width: $mobile-width-max) {
+    width: 290px;
+    height: 519px;
+    padding: 40px 15px;
+    padding-bottom: 45px;
+  }
+
+  h2 {
+    font-size: 26px;
+    text-align: center;
+    letter-spacing: normal;
+  }
+}
+
+.cart-modal__overlay {
+  background-color: rgba(29, 22, 19, 0.25);
+}
+
+.cart-modal__item-add {
+  position: relative;
+  display: flex;
+  margin-top: 40px;
+  padding-bottom: 41px;
+
+  @media (max-width: $mobile-width-max) {
+    padding-bottom: 31px;
+  }
+
+  &::after {
+    position: absolute;
+    left: -35px;
+    bottom: 0;
+    width: 500px;
+    height: 1px;
+    background-color: $decorative-white;
+    content: "";
+
+    @media (max-width: $mobile-width-max) {
+      width: 290px;
+      left: -15px;
+    }
+  }
+}
+
+.cart-modal__item-picture {
+  width: 84px;
+  height: 79px;
+
+  @media (max-width: $mobile-width-max) {
+    width: 70px;
+    height: 63px;
+  }
+
+  img {
+    height: 100%;
+  }
+}
+
+.cart-modal__item-text {
+  margin-left: 20px;
+
+  @media (max-width: $mobile-width-max) {
+    margin-left: 15px;
+  }
+
+  p {
+    margin-top: 10px;
+  }
+}
+
+.cart-modal__item-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+}
+
+.cart-modal__item-btn {
+  @include button-reset;
+  position: relative;
+  width: 20px;
+  height: 20px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 14px;
+    height: 2px;
+    margin: auto;
+    background-color: $aside-gray;
+    content: "";
+  }
+
+  &--add {
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.cart-modal__info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 16px;
+
+  p {
+    margin: 0;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    flex-direction: column;
+  }
+
+  p:first-child {
+    font-weight: normal;
+
+    @media (max-width: $mobile-width-max) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.cart-modal__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 41px;
+
+  @media (max-width: $mobile-width-max) {
+    flex-direction: column;
+  }
+}
+
+.cart-modal__button {
+  width: 200px;
+
+  @media (max-width: $mobile-width-max) {
+    width: 100%;
+
+    &--continue {
+      margin-bottom: 20px;
+    }
+  }
+}
