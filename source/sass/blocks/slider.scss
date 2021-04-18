@@ -29,6 +29,11 @@
   padding: 0 7.5px;
   color: $aside-gray;
 
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
   @media (max-width: $tablet-width-max) {
     padding: 0 6.5px;
   }

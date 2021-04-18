@@ -210,6 +210,11 @@
   label {
     padding-left: 24px;
 
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
     &::before {
       position: absolute;
       top: 1px;
@@ -225,6 +230,10 @@
 input[type="checkbox"]:checked + label::before {
   width: 14px;
   background-color: $brown;
+}
+
+input[type="checkbox"]:focus + label {
+  opacity: 0.6;
 }
 
 .filter__form-group-inner {

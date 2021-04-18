@@ -2,6 +2,7 @@
   > h3,
   > legend {
     position: relative;
+    cursor: pointer;
 
     &::after {
       position: absolute;

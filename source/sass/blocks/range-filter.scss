@@ -50,6 +50,7 @@
   height: 15px;
   background-color: $brown;
   border-radius: 50%;
+  cursor: pointer;
 
   @media (max-width: $tablet-width-max) {
     width: 18px;
@@ -97,7 +98,7 @@
   }
 
   input {
-    width: 34px;
+    width: 40px;
   }
 
   label {
