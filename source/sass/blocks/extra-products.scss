@@ -1,0 +1,26 @@
+.extra-products {
+  padding-bottom: 125px;
+
+  @media (max-width: $tablet-width-max) {
+    padding-bottom: 75px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    padding-top: 63px;
+    padding-bottom: 64px;
+
+    h2 {
+      letter-spacing: normal;
+    }
+  }
+}
+
+.extra-products__button {
+  &--prev {
+    left: 7.174vw;
+
+    @media (max-width: $tablet-width-max) {
+      left: 5.759vw;
+    }
+  }
+}
