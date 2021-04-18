@@ -16,6 +16,7 @@ var posthtml = require('gulp-posthtml');
 var include = require('posthtml-include');
 var del = require('del');
 var concat = require('gulp-concat');
+var ghPages = require('gulp-gh-pages');
 
 var jsFileList = ['source/js/modules/utils/const.js','source/js/modules/utils/common.js', 'source/js/modules/mobile-menu.js', 'source/js/modules/accordion.js',
 'source/js/modules/slider.js', 'source/js/modules/modal.js','source/js/modules/some-products-slider.js', 'source/js/modules/login-modal.js', 'source/js/modules/main.js'];
@@ -107,6 +108,11 @@ gulp.task('copy', function () {
 gulp.task('clean', function () {
   return del('build');
 });
+
+gulp.task('deploy', function () {
+  return gulp.src('build/**/*')
+    .pipe(ghPages());
+})
 
 gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'html', 'js'));
 gulp.task('start', gulp.series('build', 'server'));
