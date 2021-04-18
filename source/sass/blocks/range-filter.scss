@@ -1,6 +1,6 @@
 .range-filter {
   margin-top: -12px;
-  padding: 0 25px 20px;
+  padding: 0 25px 16px;
 
   @media (max-width: $tablet-width-max) {
     padding: 0 88px 40px 50px;
@@ -14,7 +14,7 @@
 
 .range-filter__controls {
   position: relative;
-  padding-top: 7px;
+  padding-top: 14px;
 }
 
 .range-filter__scale {
@@ -45,7 +45,7 @@
 
 .range-filter__toggle {
   position: absolute;
-  top: 0;
+  top: 5px;
   width: 15px;
   height: 15px;
   background-color: $brown;
@@ -84,8 +84,8 @@
 .range-filter__price-controls {
   display: flex;
   box-sizing: border-box;
-  margin-top: 10px;
-  padding-left: 22.5%;
+  margin-top: 13px;
+  padding-left: 19.5%;
 
   @media (max-width: $tablet-width-max) {
     margin-top: 20px;
@@ -106,7 +106,7 @@
     line-height: 18.2px;
 
     &:first-child {
-      margin-right: 34%;
+      margin-right: 38%;
 
       @media (max-width: $tablet-width-max) {
         margin-right: 139px;

@@ -5,6 +5,10 @@
   @media (max-width: $tablet-width-max) {
     margin-top: 50px;
   }
+
+  @media (max-width: $mobile-width-max) {
+    margin-top: 41px;
+  }
 }
 
 .catalog-products__list {
@@ -12,17 +16,17 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 3.448%;
-  row-gap: 48px;
+  row-gap: 34px;
 
   @media (max-width: $tablet-width-max) {
     column-gap: 4.424%;
-    row-gap: 36px;
+    row-gap: 34px;
   }
 
   @media (max-width: $mobile-width-max) {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 10.344%;
-    row-gap: 26px;
+    row-gap: 27px;
   }
 }
 
@@ -63,8 +67,12 @@
   margin-top: 64px;
   margin-bottom: -20px;
 
+  @media (max-width: $tablet-width-max) {
+    margin-top: 71px;
+  }
+
   @media (max-width: $mobile-width-max) {
-    margin-top: 40px;
+    margin-top: 44px;
     margin-bottom: 0;
   }
 }

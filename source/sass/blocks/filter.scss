@@ -153,7 +153,7 @@
   h3 {
     box-sizing: border-box;
     width: 100%;
-    padding: 32px 60px 32px 25px;
+    padding: 24px 60px 23px 25px;
     font: inherit;
 
     @media (max-width: $tablet-width-max) {
@@ -167,7 +167,7 @@
     }
 
     &::after {
-      top: 33px;
+      top: 25px;
       right: 25px;
 
       @media (max-width: $tablet-width-max) {
@@ -185,8 +185,11 @@
 .filter__options-list {
   @include list-reset;
   display: none;
-  padding-left: 35px;
-  padding-bottom: 30px;
+  padding-left: 34px;
+  padding-right: 34px;
+  padding-bottom: 25px;
+  font-size: 14px;
+  line-height: 18.2px;
 
   @media (max-width: $tablet-width-max) {
     padding-left: 50px;
@@ -201,18 +204,18 @@
   position: relative;
 
   &:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
   }
 
   label {
-    padding-left: 27px;
+    padding-left: 24px;
 
     &::before {
       position: absolute;
-      top: 2px;
+      top: 1px;
       left: 0;
       width: 15px;
-      height: 14px;
+      height: 13px;
       border: 1px solid $brown;
       content: "";
     }
