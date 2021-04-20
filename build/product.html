@@ -30,7 +30,7 @@
     </a>
     <ul class="header__user-nav">
       <li class="header__user-nav-item header__user-nav-item--login">
-        <a class="header__user-nav-link header__user-nav-link--login link" href="#">Login</a>
+        <a class="header__user-nav-link header__user-nav-link--login link" href="login.html">Login</a>
       </li>
       <li class="header__user-nav-item header__user-nav-item--cart">
         <a class="header__user-nav-link link" href="#">
@@ -60,6 +60,7 @@
 </header>
 
     <main>
+      <h1 class="visually-hidden">Product card page</h1>
       <section class="product-card wrapper section">
         <h2 class="visually-hidden">Product card</h2>
         <div class="product-card__inner">
@@ -97,7 +98,7 @@
               </picture>
             </li>
           </ul>
-          <div class="product-card__pagination"><span class="products-card__page">1</span> of 4</div>
+          <div class="product-card__pagination"><span class="product-card__page">1</span> of 4</div>
           <div class="product-card__info">
             <h3>Gold Necklace</h3>
             <p>$ 115</p>
@@ -123,7 +124,7 @@
                 <td>18” / 20”</td>
               </tr>
             </table>
-            <button class="button button--colorized product-card__button">Add to cart</button>
+            <a class="button button--colorized product-card__button" href="cart.html">Add to cart</a>
             <footer class="product-card__service">
               <h4 class="visually-hidden">Service info</h4>
               <p>14 Day Returns</p>
@@ -397,7 +398,7 @@
     </form>
     <div class="login-modal__sign">
       <p>Don’t have an account?</p>
-      <a href="#">Sign up</a>
+      <a href="">Sign up</a>
     </div>
     <button class="login-modal__close modal__close"><span class="visually-hidden">Close modal</span></button>
   </div>
@@ -434,7 +435,7 @@
           <a class="cart-modal__button cart-modal__button--continue button" href="catalog.html">Continue shopping</a>
           <a class="cart-modal__button cart-modal__button--checkout button button--colorized" href="#">Checkout</a>
         </div>
-        <button class="login-modal__close modal__close">
+        <button class="modal__close">
           <span class="visually-hidden">Close modal</span>
         </button>
       </div>

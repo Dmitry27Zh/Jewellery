@@ -44,4 +44,9 @@
   &::after {
     transform: rotate(45deg);
   }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+  }
 }

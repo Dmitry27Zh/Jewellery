@@ -22,9 +22,10 @@
       }
     }
 
-    &--nojs {
-      .filter__wrapper {
+    &--no-js {
+      .filter__modal {
         position: static;
+        height: auto;
         transform: none;
       }
     }
