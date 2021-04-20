@@ -70,6 +70,11 @@
     accordion.children[0].addEventListener('click', () => {
       accordion.classList.toggle('accordion--opened');
     });
+    accordion.children[0].addEventListener('keydown', (evt) => {
+      if (evt.key === 'Enter') {
+        accordion.classList.toggle('accordion--opened');
+      }
+    });
   }
 })();
 
