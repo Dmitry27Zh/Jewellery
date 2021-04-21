@@ -226,15 +226,15 @@
       content: "";
     }
   }
-}
 
-input[type="checkbox"]:checked + label::before {
-  width: 14px;
-  background-color: $brown;
-}
+  input[type="checkbox"]:checked + label::before {
+    width: 14px;
+    background-color: $brown;
+  }
 
-input[type="checkbox"]:focus + label {
-  opacity: 0.6;
+  input[type="checkbox"]:focus + label {
+    opacity: 0.6;
+  }
 }
 
 .filter__form-group-inner {

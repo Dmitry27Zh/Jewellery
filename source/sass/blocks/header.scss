@@ -138,6 +138,7 @@
     margin-top: 65px;
 
     input {
+      @include button-reset;
       height: 40px;
       padding-left: 40px;
       background-color: rgba($white, 0.15);

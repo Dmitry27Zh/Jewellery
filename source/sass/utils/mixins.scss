@@ -6,6 +6,7 @@
 
 @mixin button-reset {
   display: inline-block;
+  box-sizing: border-box;
   vertical-align: top;
   padding: 0;
   font: inherit;

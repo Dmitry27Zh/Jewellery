@@ -82,7 +82,7 @@ gulp.task('sprite', function () {
 gulp.task('html', function () {
   return gulp.src('source/*.html')
       .pipe(posthtml([
-        include()
+        include({ encoding: 'utf8' })
       ]))
       .pipe(gulp.dest('build'));
 });

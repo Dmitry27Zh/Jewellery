@@ -98,6 +98,7 @@
   }
 
   input {
+    @include button-reset;
     width: 40px;
   }
 
