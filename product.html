@@ -38,7 +38,7 @@
             <use xlink:href="img/svg/sprite.svg#cart"></use>
           </svg>
           Cart
-          <span class="cart-js-quantity">0</span>
+          <span>0</span>
         </a>
       </li>
     </ul>
@@ -98,7 +98,7 @@
               </picture>
             </li>
           </ul>
-          <div class="product-card__pagination"><span class="product-card__page">1</span> of 4</div>
+          <div class="product-card__pagination"><span>1</span> of 4</div>
           <div class="product-card__info">
             <h3>Gold Necklace</h3>
             <p>$ 115</p>
@@ -294,9 +294,7 @@
             <li class="some-products__page slider__page"><a href="#">5</a></li>
             <li class="some-products__page slider__page"><a href="#">6</a></li>
           </ul>
-          <div class="some-products__pagination-short slider__pagination-short">
-            <span class="slider__page-short">1</span> of <span>6</span>
-          </div>
+          <div class="some-products__pagination-short slider__pagination-short"><span>1</span> of <span>6</span></div>
           <button class="some-products__button extra-products__button extra-products__button--prev some-products__button--prev slider__button-prev" disabled="">
             <span class="visually-hidden">Previous page</span>
             <svg width="30" height="11" viewBox="0 0 30 11" fill="none" stroke="#A87B62">
@@ -380,7 +378,7 @@
   </div>
 </footer>
 
-    <section class="section login-modal modal">
+    <section class="section login-modal modal {{ class }}">
   <div class="modal__overlay"></div>
   <div class="login-modal__inner modal__inner">
     <h2>Log In</h2>
@@ -390,7 +388,7 @@
         <input type="email" id="login-email" name="email" placeholder="Your E-mail" required="">
       </div>
       <div class="login-modal__input login-modal__input--password">
-        <label class="visually-hidden" for="login-email">Enter your password</label>
+        <label class="visually-hidden" for="login-password">Enter your password</label>
         <input type="password" id="login-password" name="password" placeholder="Password" required="">
       </div>
       <a class="login-modal__forget" href="#">Forgot your password?</a>

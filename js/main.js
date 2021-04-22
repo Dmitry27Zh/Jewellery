@@ -349,7 +349,7 @@
   const sliderPagination = slider.querySelector('.slider__pagination');
   const sliderButtonPrev = slider.querySelector('.slider__button-prev');
   const sliderButtonNext = slider.querySelector('.slider__button-next');
-  const sliderPaginationShort = slider.querySelector('.slider__page-short');
+  const sliderPaginationShort = slider.querySelector('span');
 
   const sliderSettings = {
     slidesContainer,

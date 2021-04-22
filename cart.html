@@ -37,7 +37,7 @@
             <use xlink:href="img/svg/sprite.svg#cart"></use>
           </svg>
           Cart
-          <span class="cart-js-quantity">0</span>
+          <span>0</span>
         </a>
       </li>
     </ul>
@@ -58,7 +58,8 @@
   </ul>
 </header>
 
-    <section class="section cart-modal modal">
+    <h1 class="visually-hidden">Successfully added item</h1>
+    <section class="section cart-modal modal modal--blank">
       <div class="cart-modal__overlay modal__overlay"></div>
       <div class="cart-modal__inner modal__inner">
         <h2>The item was added to&nbsp;your cart</h2>
@@ -89,7 +90,7 @@
           <a class="cart-modal__button cart-modal__button--continue button" href="catalog.html">Continue shopping</a>
           <a class="cart-modal__button cart-modal__button--checkout button button--colorized" href="#">Checkout</a>
         </div>
-        <button class="login-modal__close modal__close">
+        <button class="modal__close">
           <span class="visually-hidden">Close modal</span>
         </button>
       </div>
